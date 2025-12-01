@@ -35,8 +35,13 @@ root/
 ├─ manifests/                   # package.xml for org deployment/retrieval
 │
 ├─ documentation/
-│   ├─ index.md                 # index of days
+│   ├─ index.md                 # Index of days
 │   ├─ days/
+│   │   ├─ solutions/           # Solution designs
+│   │   │   ├─ Day1_Solution.md
+│   │   │   ├─ Day2_Solution.md
+│   │   │   ├─ Day3_Solution.md
+│   │   │   └─ ... up to Day25_Solution.md
 │   │   ├─ Day1.md
 │   │   ├─ Day2.md
 │   │   ├─ Day3.md
@@ -47,11 +52,15 @@ root/
 
 ### How documentation works
 
-* Each day receives **its own markdown file** under `documentation/days/`
-* Each file contains:
+* Each day receives **its own markdown files** under `documentation/days/` and `documentation/days/solutions/`
+* Each overview file contains:
 
   * Challenge description
   * Requirements
+  * Notes
+
+* Each solution file contains:
+
   * Approach / solution notes
   * Relevant Apex, Flow, or metadata details
   * Test summaries
@@ -74,7 +83,8 @@ This repo uses a **“one branch per challenge/day”** model to keep work clean
    `git checkout -b day-XX`
 2. Implement the challenge in `/force-app`
 3. Document work in:
-   `documentation/days/DayXX.md`
+   `documentation/days/DayXX.md` AND
+   `documentation/days/solutions/DayXX_Solution.md`
 4. Commit early and often
 5. Open a PR into `main`
 6. Merge after review / completion
