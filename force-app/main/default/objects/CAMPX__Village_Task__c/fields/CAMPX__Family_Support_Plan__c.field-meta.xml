@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CAMPX__Family_Support_Plan__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <deprecated>false</deprecated>
+    <description>Links this task to its parent Family Support Plan.</description>
+    <inlineHelpText>Select the Family Support Plan this task belongs to. This creates a parent-child relationship so tasks appear on the plan.</inlineHelpText>
+    <label>Family Support Plan</label>
+    <referenceTo>CAMPX__Family_Support_Plan__c</referenceTo>
+    <relationshipLabel>Village Tasks</relationshipLabel>
+    <relationshipName>Village_Tasks</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

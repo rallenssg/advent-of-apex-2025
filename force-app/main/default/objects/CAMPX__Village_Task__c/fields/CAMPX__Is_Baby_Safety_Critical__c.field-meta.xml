@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CAMPX__Is_Baby_Safety_Critical__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>True for tasks involving baby safety (crib assembly, electrical work, etc.).</description>
+    <inlineHelpText>Check if this task is safety-critical for the baby. Use this to flag tasks that may need review or priority.</inlineHelpText>
+    <label>Is Baby Safety Critical</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

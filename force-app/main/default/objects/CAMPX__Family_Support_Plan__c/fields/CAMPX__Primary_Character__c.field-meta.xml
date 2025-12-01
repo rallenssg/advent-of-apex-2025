@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CAMPX__Primary_Character__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Who is leading this plan?</description>
+    <inlineHelpText>Choose the villager or family member primarily responsible for shepherding this plan.</inlineHelpText>
+    <label>Primary Character</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mama &amp; Papa</fullName>
+                <default>false</default>
+                <label>Mama &amp; Papa</label>
+            </value>
+            <value>
+                <fullName>Stella Pinewood</fullName>
+                <default>false</default>
+                <label>Stella Pinewood</label>
+            </value>
+            <value>
+                <fullName>Finn Brightwick</fullName>
+                <default>false</default>
+                <label>Finn Brightwick</label>
+            </value>
+            <value>
+                <fullName>Poppy Wintergold</fullName>
+                <default>false</default>
+                <label>Poppy Wintergold</label>
+            </value>
+            <value>
+                <fullName>Shakira Maestro</fullName>
+                <default>false</default>
+                <label>Shakira Maestro</label>
+            </value>
+            <value>
+                <fullName>Ivy Evergreen</fullName>
+                <default>false</default>
+                <label>Ivy Evergreen</label>
+            </value>
+            <value>
+                <fullName>Grandma Kelly</fullName>
+                <default>false</default>
+                <label>Grandma Kelly</label>
+            </value>
+            <value>
+                <fullName>Tinker Bellwright</fullName>
+                <default>false</default>
+                <label>Tinker Bellwright</label>
+            </value>
+            <value>
+                <fullName>Monica Patchwork</fullName>
+                <default>false</default>
+                <label>Monica Patchwork</label>
+            </value>
+            <value>
+                <fullName>Dr. Grace Evergreen</fullName>
+                <default>false</default>
+                <label>Dr. Grace Evergreen</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

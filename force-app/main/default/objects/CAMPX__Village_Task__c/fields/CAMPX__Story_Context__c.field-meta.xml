@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CAMPX__Story_Context__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Narrative explanation of the task in-world.</description>
+    <inlineHelpText>Write the story context for this task. Example: &quot;Finn wants to make sure the night light is soft enough not to wake Baby Shaya but bright enough for late-night diaper changes.&quot;</inlineHelpText>
+    <label>Story Context</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

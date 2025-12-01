@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CAMPX__Task_Type__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Type of task being performed.</description>
+    <inlineHelpText>Categorize the task by type to help with filtering and reporting.</inlineHelpText>
+    <label>Task Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Build / Fix</fullName>
+                <default>false</default>
+                <label>Build / Fix</label>
+            </value>
+            <value>
+                <fullName>Decorate</fullName>
+                <default>false</default>
+                <label>Decorate</label>
+            </value>
+            <value>
+                <fullName>Cook / Deliver Meal</fullName>
+                <default>false</default>
+                <label>Cook / Deliver Meal</label>
+            </value>
+            <value>
+                <fullName>Music / Lullaby</fullName>
+                <default>false</default>
+                <label>Music / Lullaby</label>
+            </value>
+            <value>
+                <fullName>Health &amp; Safety Check</fullName>
+                <default>false</default>
+                <label>Health &amp; Safety Check</label>
+            </value>
+            <value>
+                <fullName>Garden / Outdoor</fullName>
+                <default>false</default>
+                <label>Garden / Outdoor</label>
+            </value>
+            <value>
+                <fullName>Gifts &amp; Keepsakes</fullName>
+                <default>false</default>
+                <label>Gifts &amp; Keepsakes</label>
+            </value>
+            <value>
+                <fullName>Organize / Coordinate</fullName>
+                <default>false</default>
+                <label>Organize / Coordinate</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

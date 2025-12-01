@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CAMPX__Story_Description__c</fullName>
+    <deprecated>false</deprecated>
+    <description>In-world narrative description of what this plan is about.</description>
+    <inlineHelpText>Write a short, in-world description of the plan&apos;s theme and intent. Example: &quot;Stella and Poppy are teaming up to get the nursery cozy, safe, and ready before Baby Shaya arrives.&quot;</inlineHelpText>
+    <label>Story Description</label>
+    <length>32768</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>
