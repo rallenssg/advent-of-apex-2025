@@ -1,19 +1,16 @@
-# Day 22 - [Challenge Title]
+# Day 22 - Diaper Bag Essentials Checker
 
 ## Challenge Description
 [Description of the challenge]
 
+[Additional challenge context and instructions]
+
 ## Requirements
 [List of requirements to fulfill]
 
-## Approach / Solution Notes
-[Notes about the approach taken to solve the challenge]
+## Notes
+[Implementation notes and guidelines]
 
-## Relevant Apex, Flow, or Metadata Details
-[Technical implementation details]
+---
 
-## Test Summaries
-[Summary of testing performed]
-
-## Lessons Learned
-[Key takeaways and lessons learned from this challenge]
+**[📋 View Solution Details](solutions/Day22_Solution.md)**

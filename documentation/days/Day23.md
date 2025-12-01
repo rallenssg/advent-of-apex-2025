@@ -1,19 +1,16 @@
-# Day 23 - [Challenge Title]
+# Day 23 - Ready for Adventure
 
 ## Challenge Description
 [Description of the challenge]
 
+[Additional challenge context and instructions]
+
 ## Requirements
 [List of requirements to fulfill]
 
-## Approach / Solution Notes
-[Notes about the approach taken to solve the challenge]
+## Notes
+[Implementation notes and guidelines]
 
-## Relevant Apex, Flow, or Metadata Details
-[Technical implementation details]
+---
 
-## Test Summaries
-[Summary of testing performed]
-
-## Lessons Learned
-[Key takeaways and lessons learned from this challenge]
+**[📋 View Solution Details](solutions/Day23_Solution.md)**
