@@ -1,4 +1,4 @@
-# Day 23 Solution - Ready for Adventure
+# Day 24 Solution - Busy Day Planner
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]

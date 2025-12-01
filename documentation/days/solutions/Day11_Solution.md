@@ -1,4 +1,4 @@
-# Day 10 Solution - 📋 Most Needed Supply
+# Day 11 Solution - 🍪 Cookie Tin Gift Distribution
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]

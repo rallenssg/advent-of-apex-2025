@@ -1,4 +1,4 @@
-# Day 19 Solution - Lumber Cut Optimizer
+# Day 20 Solution - 🎄 Christmas Tree Ornament Balancer
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]

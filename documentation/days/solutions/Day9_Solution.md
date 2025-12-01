@@ -1,4 +1,4 @@
-# Day 8 Solution - 👶 Days Until Baby Countdown
+# Day 9 Solution - 🍼 Nursery Supply Counter
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]

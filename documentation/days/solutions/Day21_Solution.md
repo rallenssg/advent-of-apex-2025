@@ -1,4 +1,4 @@
-# Day 20 Solution - 🎄 Christmas Tree Ornament Balancer
+# Day 21 Solution - Christmas Visit Curfew Planner
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]

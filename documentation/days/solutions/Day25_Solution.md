@@ -1,4 +1,4 @@
-# Day 24 Solution - Busy Day Planner
+# Day 25 Solution - Quick Outing Finder
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]

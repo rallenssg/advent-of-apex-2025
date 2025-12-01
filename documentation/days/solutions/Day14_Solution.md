@@ -1,4 +1,4 @@
-# Day 13 Solution - Festive Decoration Rollup
+# Day 14 Solution - Password Security Validator
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]

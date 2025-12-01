@@ -1,4 +1,4 @@
-# Day 12 Solution - �� Stocking Name Embroidery Planner
+# Day 13 Solution - Festive Decoration Rollup
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]

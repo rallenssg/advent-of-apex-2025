@@ -1,4 +1,4 @@
-# 
+# Day 6 Solution - Sync Phase to Tasks
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]

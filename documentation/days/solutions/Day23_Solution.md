@@ -1,4 +1,4 @@
-# Day 22 Solution - Diaper Bag Essentials Checker
+# Day 23 Solution - Ready for Adventure
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]

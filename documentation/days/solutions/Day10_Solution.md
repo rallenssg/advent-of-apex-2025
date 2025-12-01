@@ -1,4 +1,4 @@
-# Day 9 Solution - 🍼 Nursery Supply Counter
+# Day 10 Solution - 📋 Most Needed Supply
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]

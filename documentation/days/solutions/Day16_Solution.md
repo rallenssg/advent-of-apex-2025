@@ -1,4 +1,4 @@
-# Day 15 Solution - Perfect Wreath Symmetry
+# Day 16 Solution - Baby Monitor Range Calculator
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]

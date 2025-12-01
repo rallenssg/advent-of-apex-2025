@@ -1,4 +1,4 @@
-# Day 21 Solution - Christmas Visit Curfew Planner
+# Day 22 Solution - Diaper Bag Essentials Checker
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]

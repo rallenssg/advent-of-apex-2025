@@ -1,4 +1,4 @@
-# Day 17 Solution - 🎵 Lullaby Carol Playlist Mixer
+# Day 18 Solution - Festive Light String Validator
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]

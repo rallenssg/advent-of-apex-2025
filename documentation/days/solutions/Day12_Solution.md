@@ -1,4 +1,4 @@
-# Day 11 Solution - 🍪 Cookie Tin Gift Distribution
+# Day 12 Solution - 🧵 Stocking Name Embroidery Planner
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]

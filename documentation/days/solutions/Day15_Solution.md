@@ -1,4 +1,4 @@
-# Day 14 Solution - Password Security Validator
+# Day 15 Solution - Perfect Wreath Symmetry
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]

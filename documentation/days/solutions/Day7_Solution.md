@@ -1,4 +1,4 @@
-# Day 6 Solution - Sync Phase to Tasks
+# Day 7 Solution - Block High Priority Plan Deletion
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]

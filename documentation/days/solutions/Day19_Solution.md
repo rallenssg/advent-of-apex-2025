@@ -1,4 +1,4 @@
-# Day 18 Solution - Festive Light String Validator
+# Day 19 Solution - Lumber Cut Optimizer
 
 ## Approach / Solution Notes
 [Notes about the approach taken to solve the challenge]
