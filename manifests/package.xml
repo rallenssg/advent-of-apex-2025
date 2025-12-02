@@ -34,6 +34,11 @@
         <name>CustomTab</name>
     </types>
     <types>
+        <members>Family_Support_Plan_High_Priority_Health</members>
+        <members>Village_Task_Assign_Character</members>
+        <name>Flow</name>
+    </types>
+    <types>
         <members>CAMPX__Family_Support_Manager</members>
         <name>PermissionSet</name>
     </types>
