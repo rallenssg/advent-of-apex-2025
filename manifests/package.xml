@@ -39,6 +39,21 @@
         <name>Flow</name>
     </types>
     <types>
+        <members>TriggerHandler</members>
+        <members>TriggerHandler_Test</members>
+        <members>VillageTaskService</members>
+        <members>VillageTaskService_Test</members>
+        <members>VillageTaskTriggerHandler</members>
+        <members>VillageTaskUtils</members>
+        <members>VillageTaskUtils_Test</members>
+        <members>VillageTask_IntegrationTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>VillageTaskTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
         <members>CAMPX__Family_Support_Manager</members>
         <name>PermissionSet</name>
     </types>
