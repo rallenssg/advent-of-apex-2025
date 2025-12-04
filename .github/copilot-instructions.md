@@ -95,7 +95,7 @@ When user says "complete day" (or variations like "finish day", "complete challe
 1. **Update Solution File**: `documentation/days/solutions/DayX_Solution.md`
 2. **Stage Changes**: `git add .`
 3. **Commit**: Generate descriptive commit message starting with "Day X Solution:"
-4. **Push**: `git push origin day-X` (or `git push -u origin day-X` if new branch)
+4. **Push with Upstream**: `git push -u origin day-X` (always use -u to set upstream tracking)
 5. **Summary Report**: Display status summary:
    ```
    Commit: [success|fail]
