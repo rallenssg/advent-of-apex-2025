@@ -7,7 +7,21 @@
  * @date December 3, 2025
  */
 public class VillageTaskService {
-    
+
+    /**
+     * @description Handles the before insert trigger event for Village Task records.
+     *              Sets default values and enforces business rules prior to record insertion.
+     * 
+     * @param vTasks List of Village Task records being inserted
+     */
+    public static void handleBeforeInsert(List<CAMPX__Village_Task__c> vTasks) {
+        for(CAMPX__Village_Task__c vTask : vTasks) {
+            if(vTask.CAMPX__Support_Phase__c == 'Before Baby Arrives' && vTask.CAMPX__Due_Date__c == null) {
+                vTask.CAMPX__Due_Date__c = Date.today().addDays(14);
+            }
+        }
+    }
+
     /**
      * @description Handles the before delete trigger event for Village Task records.
      *              Validates each task against deletion rules and prevents deletion

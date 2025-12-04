@@ -1,6 +1,202 @@
 @IsTest
 public class VillageTaskService_Test {
     @IsTest
+    static void test_handleBeforeInsert_validPhaseWithDueDate() {
+        CAMPX__Village_Task__c dueDateTask = new CAMPX__Village_Task__c(
+            CAMPX__Support_Phase__c = 'Before Baby Arrives',
+            CAMPX__Due_Date__c = Date.today().addDays(7)
+        );
+
+        VillageTaskService.handleBeforeInsert(
+            new List<CAMPX__Village_Task__c>{
+                dueDateTask
+            }
+        );
+
+        System.assert(
+            dueDateTask.CAMPX__Due_Date__c == Date.today().addDays(7),
+            'POPULATED DUE DATE TASK:\n' +
+            'Due Date should not be updated when already populated:\n\t' +
+                'Expected: ' + Date.today().addDays(7) + '\n' +
+                'Actual: ' + dueDateTask.CAMPX__Due_Date__c
+        );
+
+        CAMPX__Village_Task__c dueDateTaskClone = dueDateTask.clone(false);
+
+        VillageTaskService.handleBeforeInsert(
+            new List<CAMPX__Village_Task__c>{
+                dueDateTask,
+                dueDateTaskClone
+            }
+        );
+
+        System.assert(
+            dueDateTask.CAMPX__Due_Date__c == Date.today().addDays(7),
+            'POPULATED DUE DATE TASKS:\n' +
+            'Due Date should not be updated when already populated:\n\t' +
+                'Expected: ' + Date.today().addDays(7) + '\n' +
+                'Actual: ' + dueDateTask.CAMPX__Due_Date__c
+        );
+
+        System.assert(
+            dueDateTaskClone.CAMPX__Due_Date__c == Date.today().addDays(7),
+            'POPULATED DUE DATE TASKS:\n' +
+            'Due Date should not be updated when already populated:\n\t' +
+                'Expected: ' + Date.today().addDays(7) + '\n' +
+                'Actual: ' + dueDateTaskClone.CAMPX__Due_Date__c
+        );
+    }
+
+    @IsTest
+    static void test_handleBeforeInsert_invalidPhase() {
+        CAMPX__Village_Task__c invalidPhaseTask = new CAMPX__Village_Task__c(
+            CAMPX__Support_Phase__c = 'After Baby Arrives',
+            CAMPX__Due_Date__c = null
+        );
+
+        VillageTaskService.handleBeforeInsert(
+            new List<CAMPX__Village_Task__c>{
+                invalidPhaseTask
+            }
+        );
+
+        System.assert(
+            invalidPhaseTask.CAMPX__Due_Date__c == null,
+            'INVALID PHASE TASK:\n' +
+            'Due Date should not be updated for invalid support phase tasks:\n\t' +
+                'Phase: ' + invalidPhaseTask.CAMPX__Support_Phase__c + '\n' +
+                'Expected: ' + null + '\n' +
+                'Actual: ' + invalidPhaseTask.CAMPX__Due_Date__c
+        );
+
+        CAMPX__Village_Task__c invalidPhaseTask2 = new CAMPX__Village_Task__c(
+            CAMPX__Support_Phase__c = 'After Baby Arrives',
+            CAMPX__Due_Date__c = Date.today().addDays(7)
+        );
+
+        VillageTaskService.handleBeforeInsert(
+            new List<CAMPX__Village_Task__c>{
+                invalidPhaseTask,
+                invalidPhaseTask2
+            }
+        );
+
+        System.assert(
+            invalidPhaseTask.CAMPX__Due_Date__c == null,
+            'INVALID PHASE TASKS:\n' +
+            'Due Date should not be updated for invalid support phase tasks:\n\t' +
+                'Phase: ' + invalidPhaseTask.CAMPX__Support_Phase__c + '\n' +
+                'Expected: ' + null + '\n' +
+                'Actual: ' + invalidPhaseTask.CAMPX__Due_Date__c
+        );
+
+        System.assert(
+            invalidPhaseTask2.CAMPX__Due_Date__c == Date.today().addDays(7),
+            'INVALID PHASE TASKS:\n' +
+            'Due Date should not be updated for invalid support phase tasks:\n\t' +
+                'Phase: ' + invalidPhaseTask2.CAMPX__Support_Phase__c + '\n' +
+                'Expected: ' + Date.today().addDays(7) + '\n' +
+                'Actual: ' + invalidPhaseTask2.CAMPX__Due_Date__c
+        );
+    }
+
+    @IsTest
+    static void test_handleBeforeInsert_validPhaseNullDueDate() {
+        CAMPX__Village_Task__c nullDueDateTask = new CAMPX__Village_Task__c(
+            CAMPX__Support_Phase__c = 'Before Baby Arrives',
+            CAMPX__Due_Date__c = null
+        );
+
+        VillageTaskService.handleBeforeInsert(
+            new List<CAMPX__Village_Task__c>{
+                nullDueDateTask
+            }
+        );
+
+        System.assert(
+            nullDueDateTask.CAMPX__Due_Date__c == Date.today().addDays(14),
+            'NULL DUE DATE TASK:\n' +
+            'Due Date should be set to 14 days from today for tasks in \'Before Baby Arrives\' phase with null due date:\n\t' +
+                'Expected: ' + Date.today().addDays(14) + '\n' +
+                'Actual: ' + nullDueDateTask.CAMPX__Due_Date__c
+        );
+
+        CAMPX__Village_Task__c nullDueDateTaskClone = nullDueDateTask.clone(false);
+
+        VillageTaskService.handleBeforeInsert(
+            new List<CAMPX__Village_Task__c>{
+                nullDueDateTask,
+                nullDueDateTaskClone
+            }
+        );
+
+        System.assert(
+            nullDueDateTask.CAMPX__Due_Date__c == Date.today().addDays(14),
+            'NULL DUE DATE TASKS:\n' +
+            'Due Date should be set to 14 days from today for tasks in \'Before Baby Arrives\' phase with null due date:\n\t' +
+                'Expected: ' + Date.today().addDays(14) + '\n' +
+                'Actual: ' + nullDueDateTask.CAMPX__Due_Date__c
+        );
+
+        System.assert(
+            nullDueDateTaskClone.CAMPX__Due_Date__c == Date.today().addDays(14),
+            'NULL DUE DATE TASKS:\n' +
+            'Due Date should be set to 14 days from today for tasks in \'Before Baby Arrives\' phase with null due date:\n\t' +
+                'Expected: ' + Date.today().addDays(14) + '\n' +
+                'Actual: ' + nullDueDateTaskClone.CAMPX__Due_Date__c
+        );
+    }
+
+    @IsTest
+    static void test_handleBeforeInsert_mixedTasks() {
+        CAMPX__Village_Task__c dueDateTask = new CAMPX__Village_Task__c(
+            CAMPX__Support_Phase__c = 'Before Baby Arrives',
+            CAMPX__Due_Date__c = Date.today().addDays(7)
+        );
+        CAMPX__Village_Task__c invalidPhaseTask = new CAMPX__Village_Task__c(
+            CAMPX__Support_Phase__c = 'After Baby Arrives',
+            CAMPX__Due_Date__c = null
+        );
+        CAMPX__Village_Task__c nullDueDateTask = new CAMPX__Village_Task__c(
+            CAMPX__Support_Phase__c = 'Before Baby Arrives',
+            CAMPX__Due_Date__c = null
+        );
+
+        VillageTaskService.handleBeforeInsert(
+            new List<CAMPX__Village_Task__c>{
+                nullDueDateTask,
+                dueDateTask,
+                invalidPhaseTask
+            }
+        );
+
+        System.assert(
+            dueDateTask.CAMPX__Due_Date__c == Date.today().addDays(7),
+            'MIXED TASKS:\n' +
+            'Due Date should not be updated when already populated:\n\t' +
+                'Expected: ' + Date.today().addDays(7) + '\n' +
+                'Actual: ' + dueDateTask.CAMPX__Due_Date__c
+        );
+
+        System.assert(
+            invalidPhaseTask.CAMPX__Due_Date__c == null,
+            'MIXED TASKS:\n' +
+            'Due Date should not be updated for invalid support phase tasks:\n\t' +
+                'Phase: ' + invalidPhaseTask.CAMPX__Support_Phase__c + '\n' +
+                'Expected: ' + null + '\n' +
+                'Actual: ' + invalidPhaseTask.CAMPX__Due_Date__c
+        );
+
+        System.assert(
+            nullDueDateTask.CAMPX__Due_Date__c == Date.today().addDays(14),
+            'MIXED TASKS:\n' +
+            'Due Date should be set to 14 days from today for tasks in \'Before Baby Arrives\' phase with null due date:\n\t' +
+                'Expected: ' + Date.today().addDays(14) + '\n' +
+                'Actual: ' + nullDueDateTask.CAMPX__Due_Date__c
+        );
+    }
+
+    @IsTest
     static void test_handleBeforeDelete_validTasks() {
         CAMPX__Village_Task__c nonCriticalTask = new CAMPX__Village_Task__c(
             CAMPX__Is_Baby_Safety_Critical__c = false,
@@ -19,7 +215,7 @@ public class VillageTaskService_Test {
 
         System.assert(
             !hasErrors(nonCriticalTask),
-            'VALID TASKS SINGLE:\n' +
+            'VALID TASK:\n' +
             'Non-critical task should not have errors:\n\t' +
                 'Record: ' + nonCriticalTask + '\n' +
                 'Errors: ' + nonCriticalTask.getErrors()
@@ -33,7 +229,7 @@ public class VillageTaskService_Test {
 
         System.assert(
             !hasErrors(criticalCompletedTask),
-            'VALID TASKS SINGLE:\n' +
+            'VALID TASK:\n' +
             'Critical completed task should not have errors:\n\t' +
                 'Record: ' + criticalCompletedTask + '\n' +
                 'Errors: ' + criticalCompletedTask.getErrors()
@@ -48,7 +244,7 @@ public class VillageTaskService_Test {
 
         System.assert(
             !hasErrors(nonCriticalTask) && !hasErrors(criticalCompletedTask),
-            'VALID TASKS MULTI:\n' +
+            'VALID TASKS:\n' +
             'Non-critical and critical completed tasks should not have errors:\n\t' +
                 'Record1: ' + nonCriticalTask + '\n\t' +
                     'Errors: ' + nonCriticalTask.getErrors() + '\n' +
@@ -72,7 +268,7 @@ public class VillageTaskService_Test {
 
         System.assert(
             hasErrors(criticalInProgressTask),
-            'INVALID TASKS SINGLE:\n' +
+            'INVALID TASK:\n' +
             'Critical in-progress task should have errors:\n\t' +
                 'Record: ' + criticalInProgressTask
         );
@@ -91,7 +287,7 @@ public class VillageTaskService_Test {
 
         System.assert(
             hasErrors(criticalInProgressTask) && hasErrors(criticalInProgressTask2),
-            'INVALID TASKS MULTI:\n' +
+            'INVALID TASKS:\n' +
             'Critical in-progress task should have 2 errors:\n\t' +
                 'Record1: ' + criticalInProgressTask + '\n\t' +
                 'Errors: ' + criticalInProgressTask.getErrors() + '\n' +
