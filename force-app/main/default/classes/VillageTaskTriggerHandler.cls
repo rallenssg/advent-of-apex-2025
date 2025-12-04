@@ -19,4 +19,16 @@ public class VillageTaskTriggerHandler extends TriggerHandler {
     public override void beforeDelete() {
         VillageTaskService.handleBeforeDelete(Trigger.old);
     }
+
+    /**
+     * @description Handles before insert trigger operations for Village Task records.
+     *              This method is automatically called by the TriggerHandler framework
+     *              when Village Task records are about to be inserted into the database.
+     *              
+     *              The method delegates the actual business logic to the VillageTaskService
+     *              to maintain separation of concerns and enable proper unit testing.
+     */
+    public override void beforeInsert() {
+        VillageTaskService.handleBeforeInsert(Trigger.new);
+    }
 }
