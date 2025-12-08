@@ -31,4 +31,16 @@ public class VillageTaskTriggerHandler extends TriggerHandler {
     public override void beforeInsert() {
         VillageTaskService.handleBeforeInsert(Trigger.new);
     }
+
+    /**
+     * @description Handles before update trigger operations for Village Task records.
+     *              This method is automatically called by the TriggerHandler framework
+     *              when Village Task records are about to be updated in the database.
+     *              
+     *              The method delegates the actual business logic to the VillageTaskService
+     *              to maintain separation of concerns and enable proper unit testing.
+     */
+    public override void beforeUpdate() {
+        VillageTaskService.handleBeforeUpdate(Trigger.new, (Map<Id, CAMPX__Village_Task__c>) Trigger.oldMap);
+    }
 }

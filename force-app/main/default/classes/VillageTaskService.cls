@@ -15,11 +15,19 @@ public class VillageTaskService {
      * @param vTasks List of Village Task records being inserted
      */
     public static void handleBeforeInsert(List<CAMPX__Village_Task__c> vTasks) {
-        for(CAMPX__Village_Task__c vTask : vTasks) {
-            if(vTask.CAMPX__Support_Phase__c == 'Before Baby Arrives' && vTask.CAMPX__Due_Date__c == null) {
-                vTask.CAMPX__Due_Date__c = Date.today().addDays(14);
-            }
-        }
+        VillageTaskUtils.validateSave(vTasks);
+
+        VillageTaskUtils.setDefaults(vTasks);
+    }
+
+    /**
+     * @description Handles the before update trigger event for Village Task records.
+     * 
+     * @param vTasks List of Village Task records being updated
+     * @param oldMap Map of old Village Task records prior to update
+     */
+    public static void handleBeforeUpdate(List<CAMPX__Village_Task__c> vTasks, Map<Id, CAMPX__Village_Task__c> oldMap) {
+        VillageTaskUtils.validateSave(vTasks);
     }
 
     /**
@@ -30,10 +38,6 @@ public class VillageTaskService {
      * @param vTasks List of Village Task records being deleted
      */
     public static void handleBeforeDelete(List<CAMPX__Village_Task__c> vTasks) {
-        for(CAMPX__Village_Task__c vTask : vTasks) {
-            if(!VillageTaskUtils.isValidDelete(vTask)) {
-                vTask.addError('Cannot delete safety-critical tasks that are not completed. Please complete the task first or contact your administrator.');
-            }
-        }
+        VillageTaskUtils.validateDelete(vTasks);
     }
 }
