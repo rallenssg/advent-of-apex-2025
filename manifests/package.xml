@@ -39,6 +39,12 @@
         <name>Flow</name>
     </types>
     <types>
+        <members>FamilySupportPlanService</members>
+        <members>FamilySupportPlanService_Test</members>
+        <members>FamilySupportPlanTriggerHandler</members>
+        <members>FamilySupportPlanUtils</members>
+        <members>FamilySupportPlanUtils_Test</members>
+        <members>FamilySupportPlan_IntegrationTest</members>
         <members>TriggerHandler</members>
         <members>TriggerHandler_Test</members>
         <members>VillageTaskService</members>
@@ -50,6 +56,7 @@
         <name>ApexClass</name>
     </types>
     <types>
+        <members>FamilySupportPlanTrigger</members>
         <members>VillageTaskTrigger</members>
         <name>ApexTrigger</name>
     </types>
